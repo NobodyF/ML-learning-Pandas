@@ -28,3 +28,16 @@
 | 2.2 | Strongest Spearman rank correlation | Ap_hi, Ap_lo (0.74) |
 | 2.3 | Why the strong rank correlation | Nature of the data |
 | 2.4 | Smallest age where CVD outnumbers non-CVD | 55 |
+
+# Assignment #3 (demo). Decision trees with a toy task and the UCI Adult dataset
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Entropy S0 of the initial system | 0.985 |
+| 2 | Split by Looks_handsome: S1 / S2 / IG | 0.811 / 0.918 / 0.128 |
+| 3 | Entropy of balls_left | 0.961 |
+| 4 | Entropy of a fair die | 2.585 |
+| 5 | IG from splitting balls into balls_left / balls_right | 0.161 |
+| 6 | Test accuracy, tree max_depth=3 | 0.845 |
+| 7 | Test accuracy, tree max_depth=9 | 0.848 (official answer; current sklearn gives 0.858) |
+| – | Optional: RF 100 trees / tuned RF test accuracy | 0.853 / 0.865 |
