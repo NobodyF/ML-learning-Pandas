@@ -28,3 +28,91 @@
 | 2.2 | Strongest Spearman rank correlation | Ap_hi, Ap_lo (0.74) |
 | 2.3 | Why the strong rank correlation | Nature of the data |
 | 2.4 | Smallest age where CVD outnumbers non-CVD | 55 |
+
+# Assignment #3 (demo). Decision trees with a toy task and the UCI Adult dataset
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Entropy S0 of the initial system | 0.985 |
+| 2 | Split by Looks_handsome: S1 / S2 / IG | 0.811 / 0.918 / 0.128 |
+| 3 | Entropy of balls_left | 0.961 |
+| 4 | Entropy of a fair die | 2.585 |
+| 5 | IG from splitting balls into balls_left / balls_right | 0.161 |
+| 6 | Test accuracy, tree max_depth=3 | 0.845 |
+| 7 | Test accuracy, tree max_depth=9 | 0.848 (official answer; current sklearn gives 0.858) |
+| – | Optional: RF 100 trees / tuned RF test accuracy | 0.853 / 0.865 |
+
+# Assignment #4 (demo). Exploring OLS, Lasso and Random Forest in a regression task
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Linear regression MSE (train / holdout) | 0.558 / 0.584 |
+| 2 | Most influential feature (linear regression) | density |
+| – | Least informative feature (Lasso, alpha=0.01) | fixed acidity, citric acid, total sulfur dioxide (all zeroed) |
+| 3 | Least informative feature (tuned LassoCV) | citric acid |
+| 4 | Tuned Lasso MSE (train / holdout) | 0.558 / 0.583 |
+| 5 | Random Forest MSE (train / CV / holdout) | 0.053 / 0.414 / 0.372 |
+| 6 | Tuned Random Forest MSE (CV / holdout) | 0.398 / 0.366 (best: max_depth=21, max_features=6) |
+| 7 | Most important feature (Random Forest) | alcohol |
+
+# Assignment #5 (demo). Logistic Regression and Random Forest in the credit scoring problem
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Probability of correct majority verdict (5 jurors, 70% each) | 83.70% |
+| 2 | 90% interval for mean age of customers who delayed repayment | 45.71 – 46.13 |
+| 3 | Optimal C for logistic regression | 0.001 |
+| 4 | Is the best model stable (std < 0.5%)? | std = 0.43% → Yes by the definition (official key says No) |
+| 5 | Most important feature (scaled logistic regression) | NumberOfTime30-59DaysPastDueNotWorse |
+| 6 | Softmax weight of DebtRatio | 0.11 |
+| 7 | Change in odds of not repaying after +20 years of age | 0.70 (0.695) |
+| 8 | ROC AUC gain of Random Forest over logistic regression | 0.04 computed (0.836 vs 0.796); official key: 0.03 |
+| 9 | Weakest feature in Random Forest | NumberOfDependents |
+| 10 | Main advantage of logistic regression over Random Forest | Feature interpretability |
+| 11 | Best bagging ROC AUC | 80.93% computed → closest option 80.75% |
+| 12 | Why these bagging max_features / max_samples are best | Less correlation between single models |
+
+# Assignment #7 (demo). Unsupervised learning
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Principal components needed for 90% variance | 65 |
+| 2 | Variance covered by the first component | 51% |
+| 3 | Clusters visible on the first two components | 2 clusters: (walking, upstairs, downstairs) and (sitting, standing, laying) |
+| 4 | Activity best separated by KMeans | All three options are incorrect (best is walking upstairs, 0.80) |
+| 5 | Number of clusters by the elbow method | 2 |
+| 6 | Correct ARI statements | All three (KMeans ARI 0.42 < Agglomerative 0.49) |
+| 7 | Best C for LinearSVC | 0.1 |
+| 8 | Worst precision / recall for SVM | Precision – standing, recall – sitting |
+| 9 | CV accuracy drop with PCA | 4% (0.938 vs 0.898) |
+| 10 | Correct PCA statements | tSNE is better for visualization but PCA is cheaper; PCA components can be hard to interpret |
+
+# Assignment #8 (demo). Implementation of online regressor
+
+No quiz questions – the task is to implement `SGDRegressor` and pass the built-in test.
+
+| Check | Result |
+|-------|--------|
+| Minimal train MSE / best weights | 2.715 / w0 = 67.99, w1 = 0.944 |
+| Holdout MSE: SGDRegressor vs LinearRegression | 2.67087 vs 2.67083 |
+| Built-in test | Correct! |
+
+# Assignment #9 (demo). Time series analysis
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Prophet prediction for January 20 | 3426 (computed 3427) |
+| 2 | MAPE on the last 30 days | 34.5 |
+| 3 | MAE on the last 30 days | 600 |
+| 4 | Dickey-Fuller test | Series is not stationary, p_value = 0.107 |
+| 5 | Best SARIMAX parameters by AIC (among options) | D = 2, d = 1, Q = 1, q = 2, P = 3, p = 1 |
+
+# Assignment #10 (demo). Gradient boosting
+
+Kaggle Inclass competition [flight-delays-spring-2018](https://www.kaggle.com/c/flight-delays-spring-2018) – goal is to beat 2 benchmarks.
+
+| Model | Holdout ROC AUC |
+|-------|-----------------|
+| XGBoost, 2 features (benchmark 1) | 0.700 |
+| CatBoost with categorical + engineered features (hour, minute, route, carrier combos) | 0.827 |
+
