@@ -106,3 +106,13 @@ No quiz questions – the task is to implement `SGDRegressor` and pass the built
 | 3 | MAE on the last 30 days | 600 |
 | 4 | Dickey-Fuller test | Series is not stationary, p_value = 0.107 |
 | 5 | Best SARIMAX parameters by AIC (among options) | D = 2, d = 1, Q = 1, q = 2, P = 3, p = 1 |
+
+# Assignment #10 (demo). Gradient boosting
+
+Kaggle Inclass competition [flight-delays-spring-2018](https://www.kaggle.com/c/flight-delays-spring-2018) – goal is to beat 2 benchmarks.
+
+| Model | Holdout ROC AUC |
+|-------|-----------------|
+| XGBoost, 2 features (benchmark 1) | 0.700 |
+| CatBoost with categorical + engineered features (hour, minute, route, carrier combos) | 0.827 |
+
