@@ -54,3 +54,18 @@
 | 5 | Random Forest MSE (train / CV / holdout) | 0.053 / 0.414 / 0.372 |
 | 6 | Tuned Random Forest MSE (CV / holdout) | 0.398 / 0.366 (best: max_depth=21, max_features=6) |
 | 7 | Most important feature (Random Forest) | alcohol |
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Probability of correct majority verdict (5 jurors, 70% each) | 83.70% |
+| 2 | 90% interval for mean age of customers who delayed repayment | 45.71 – 46.13 |
+| 3 | Optimal C for logistic regression | 0.001 |
+| 4 | Is the best model stable (std < 0.5%)? | std = 0.43% → Yes by the definition (official key says No) |
+| 5 | Most important feature (scaled logistic regression) | NumberOfTime30-59DaysPastDueNotWorse |
+| 6 | Softmax weight of DebtRatio | 0.11 |
+| 7 | Change in odds of not repaying after +20 years of age | 0.70 (0.695) |
+| 8 | ROC AUC gain of Random Forest over logistic regression | 0.04 computed (0.836 vs 0.796); official key: 0.03 |
+| 9 | Weakest feature in Random Forest | NumberOfDependents |
+| 10 | Main advantage of logistic regression over Random Forest | Feature interpretability |
+| 11 | Best bagging ROC AUC | 80.93% computed → closest option 80.75% |
+| 12 | Why these bagging max_features / max_samples are best | Less correlation between single models |
