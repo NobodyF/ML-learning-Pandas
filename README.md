@@ -55,6 +55,8 @@
 | 6 | Tuned Random Forest MSE (CV / holdout) | 0.398 / 0.366 (best: max_depth=21, max_features=6) |
 | 7 | Most important feature (Random Forest) | alcohol |
 
+# Assignment #5 (demo). Logistic Regression and Random Forest in the credit scoring problem
+
 | # | Question | Answer |
 |---|----------|--------|
 | 1 | Probability of correct majority verdict (5 jurors, 70% each) | 83.70% |
@@ -69,3 +71,18 @@
 | 10 | Main advantage of logistic regression over Random Forest | Feature interpretability |
 | 11 | Best bagging ROC AUC | 80.93% computed → closest option 80.75% |
 | 12 | Why these bagging max_features / max_samples are best | Less correlation between single models |
+
+# Assignment #7 (demo). Unsupervised learning
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Principal components needed for 90% variance | 65 |
+| 2 | Variance covered by the first component | 51% |
+| 3 | Clusters visible on the first two components | 2 clusters: (walking, upstairs, downstairs) and (sitting, standing, laying) |
+| 4 | Activity best separated by KMeans | All three options are incorrect (best is walking upstairs, 0.80) |
+| 5 | Number of clusters by the elbow method | 2 |
+| 6 | Correct ARI statements | All three (KMeans ARI 0.42 < Agglomerative 0.49) |
+| 7 | Best C for LinearSVC | 0.1 |
+| 8 | Worst precision / recall for SVM | Precision – standing, recall – sitting |
+| 9 | CV accuracy drop with PCA | 4% (0.938 vs 0.898) |
+| 10 | Correct PCA statements | tSNE is better for visualization but PCA is cheaper; PCA components can be hard to interpret |
