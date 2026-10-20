@@ -96,3 +96,13 @@ No quiz questions – the task is to implement `SGDRegressor` and pass the built
 | Minimal train MSE / best weights | 2.715 / w0 = 67.99, w1 = 0.944 |
 | Holdout MSE: SGDRegressor vs LinearRegression | 2.67087 vs 2.67083 |
 | Built-in test | Correct! |
+
+# Assignment #9 (demo). Time series analysis
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Prophet prediction for January 20 | 3426 (computed 3427) |
+| 2 | MAPE on the last 30 days | 34.5 |
+| 3 | MAE on the last 30 days | 600 |
+| 4 | Dickey-Fuller test | Series is not stationary, p_value = 0.107 |
+| 5 | Best SARIMAX parameters by AIC (among options) | D = 2, d = 1, Q = 1, q = 2, P = 3, p = 1 |
