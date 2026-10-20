@@ -41,3 +41,16 @@
 | 6 | Test accuracy, tree max_depth=3 | 0.845 |
 | 7 | Test accuracy, tree max_depth=9 | 0.848 (official answer; current sklearn gives 0.858) |
 | – | Optional: RF 100 trees / tuned RF test accuracy | 0.853 / 0.865 |
+
+# Assignment #4 (demo). Exploring OLS, Lasso and Random Forest in a regression task
+
+| # | Question | Answer |
+|---|----------|--------|
+| 1 | Linear regression MSE (train / holdout) | 0.558 / 0.584 |
+| 2 | Most influential feature (linear regression) | density |
+| – | Least informative feature (Lasso, alpha=0.01) | fixed acidity, citric acid, total sulfur dioxide (all zeroed) |
+| 3 | Least informative feature (tuned LassoCV) | citric acid |
+| 4 | Tuned Lasso MSE (train / holdout) | 0.558 / 0.583 |
+| 5 | Random Forest MSE (train / CV / holdout) | 0.053 / 0.414 / 0.372 |
+| 6 | Tuned Random Forest MSE (CV / holdout) | 0.398 / 0.366 (best: max_depth=21, max_features=6) |
+| 7 | Most important feature (Random Forest) | alcohol |
