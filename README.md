@@ -86,3 +86,13 @@
 | 8 | Worst precision / recall for SVM | Precision – standing, recall – sitting |
 | 9 | CV accuracy drop with PCA | 4% (0.938 vs 0.898) |
 | 10 | Correct PCA statements | tSNE is better for visualization but PCA is cheaper; PCA components can be hard to interpret |
+
+# Assignment #8 (demo). Implementation of online regressor
+
+No quiz questions – the task is to implement `SGDRegressor` and pass the built-in test.
+
+| Check | Result |
+|-------|--------|
+| Minimal train MSE / best weights | 2.715 / w0 = 67.99, w1 = 0.944 |
+| Holdout MSE: SGDRegressor vs LinearRegression | 2.67087 vs 2.67083 |
+| Built-in test | Correct! |
