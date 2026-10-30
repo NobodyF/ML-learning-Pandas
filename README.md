@@ -72,6 +72,17 @@
 | 11 | Best bagging ROC AUC | 80.93% computed → closest option 80.75% |
 | 12 | Why these bagging max_features / max_samples are best | Less correlation between single models |
 
+# Assignment 6 (demo). Beating baselines in a competition
+
+Kaggle Inclass competition ["Catch Me If You Can" (Alice)](https://www.kaggle.com/c/catch-me-if-you-can-intruder-detection-through-webpage-session-tracking2) – goal is ~0.955+ ROC AUC on the Public Leaderboard.
+
+| Part | Approach |
+|------|----------|
+| Site features | TF-IDF over site-name n-grams (1–5), 100k features |
+| Time features | start hour / weekday / month (OHE), morning / day / evening flags, year-month, session duration, number of (unique) sites |
+| Model | Logistic regression (liblinear), C chosen with 10-fold TimeSeriesSplit |
+| Output | `submission_alice.csv` – upload to the competition page |
+
 # Assignment #7 (demo). Unsupervised learning
 
 | # | Question | Answer |
